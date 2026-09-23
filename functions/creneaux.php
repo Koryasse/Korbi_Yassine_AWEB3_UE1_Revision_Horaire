@@ -44,10 +44,6 @@ function insertCreneau(int $classeId, int $coursId, string $jour, string $heureD
     return (int) db()->lastInsertId();
 }
 
-function putCreneau(int $classeId, int $coursId, string $jour, string $heureDebut, string $heureFin, string $salle, int $id) {
-    $query = "UPDATE creneaux SET classe_id = :classe_id, cours_id = :cours_id, jour = :jour, heure_debut = :heure_debut, heure_fin = :heure_fin, salle = :salle WHERE id = :id";
-}
-
 /**
  * Effacer un créneau
  *

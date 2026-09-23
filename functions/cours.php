@@ -26,17 +26,6 @@ function insertCours(string $code, string $nom): int
 }
 
 /**
- * Modifie un cours dans la base de données
- * @param string $code
- * @param string $nom
- * @param int $id
- * @return void
- */
-function putCours(string $code, string $nom, int $id) {
-    dbRun("UPDATE cours SET code = :code, nom = :nom WHERE id = :id", [':code' => $code, ':nom' => $nom, ':id' => $id]);
-}
-
-/**
  * Effacer un cours
  *
  * @param integer $id

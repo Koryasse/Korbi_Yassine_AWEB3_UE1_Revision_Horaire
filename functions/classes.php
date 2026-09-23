@@ -26,17 +26,6 @@ function insertClasse(string $nom, string $anneeScolaire): int
 }
 
 /**
- * Modifie une classe dans une base de données
- * @param string $nom
- * @param string $anneeScolaire
- * @param int $id
- * @return void
- */
-function putClasse(string $nom, string $anneeScolaire, int $id) {
-    dbRun("UPDATE classes SET nom = :nom, annee_scolaire = :annee_scolaire WHERE id = :id", [':nom' => $nom, ':anne_scolaire' => $anneeScolaire, ':id' => $id]);
-}
-
-/**
  * Effacer une classe
  *
  * @param integer $id

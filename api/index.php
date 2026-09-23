@@ -55,9 +55,6 @@ function traiterClasses(string $methode, int|false|null $id, array $donnees): ar
         case "POST":
             $nouvelId = insertClasse($donnees['nom'] ?? '', $donnees['annee_scolaire'] ?? '');
 
-        case "PUT":
-            return ["code" => HTTP_OK, "data" => ]
-
         case "DELETE":
             if (!$id) {
                 return ["code" => HTTP_BAD_REQUEST, "data" => "id requis"];
@@ -88,8 +85,6 @@ function traiterCours(string $methode, int|false|null $id, array $donnees): arra
 
         case "POST":
             $nouvelId = insertCours($donnees['code'] ?? '', $donnees['nom'] ?? '');
-            
-        case "PUT":
 
         case "DELETE":
             if (!$id) {
